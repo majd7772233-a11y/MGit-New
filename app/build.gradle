@@ -33,14 +33,10 @@ android {
     signingConfigs {
         if (project.hasProperty('special')) {
             release {
-                def storePass = project.hasProperty('keystorePassword') && !project.property('keystorePassword').toString().isEmpty()
-                        ? project.property('keystorePassword') : project.property('password')
-                def keyPass = project.hasProperty('keyPassword') && !project.property('keyPassword').toString().isEmpty()
-                        ? project.property('keyPassword') : storePass
-                keyAlias project.property('alias')
-                keyPassword keyPass
                 storeFile file(project.property('keystore'))
-                storePassword storePass
+                storePassword project.property('storePassword')
+                keyAlias project.property('alias')
+                keyPassword project.property('keyPassword')
             }
         } else {
             release {
@@ -64,18 +60,16 @@ configurations.all {
         if (details.requested.group == "com.jcraft" && details.requested.name == "jsch") {
             details.useTarget("com.github.mwiede:jsch:0.2.0")
         }
-
     }
+
     exclude module: 'httpclient'
 }
-
 
 dependencies {
     def supportLib_version = "28.0.0"
     def lifecycle_version = "1.1.1"
 
     def acraVersion = '5.8.4'
-
     def soraVersion = '0.24.6'
 
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
@@ -113,6 +107,7 @@ dependencies {
 
     debugImplementation 'com.facebook.stetho:stetho:1.5.0'
     debugImplementation 'com.facebook.stetho:stetho-timber:1.5.0'
+
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.robolectric:robolectric:4.10.3'
 }
