@@ -33,6 +33,9 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
+      - name: Make Gradle wrapper executable
+        run: chmod +x gradlew
+
       # Signing secrets required in the repository:
       #   KEYSTORE_BASE64    - base64 encoded my_keystore.jks
       #                        (generate with: base64 -w0 my_keystore.jks)
