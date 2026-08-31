@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Aurora / Nebula futuristic palette -->
+
+    <!-- Brand / Primary -->
+    <color name="primary">#6D5DF6</color>
+    <color name="primary_variant">#4C3EE0</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#E4DFFF</color>
+    <color name="on_primary_container">#1D1148</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#00B8D4</color>
+    <color name="secondary_variant">#0091A8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#BFF1F8</color>
+    <color name="on_secondary_container">#00262D</color>
+
+    <!-- Tertiary -->
+    <color name="tertiary">#F43F5E</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#FFDDE2</color>
+    <color name="on_tertiary_container">#40000F</color>
+
+    <!-- Light scheme -->
+    <color name="light_background">#F6F7FC</color>
+    <color name="light_on_background">#171A24</color>
+    <color name="light_surface">#FFFFFF</color>
+    <color name="light_on_surface">#171A24</color>
+    <color name="light_surface_variant">#ECEEF8</color>
+    <color name="light_on_surface_variant">#444957</color>
+    <color name="light_outline">#CFD4E5</color>
+    <color name="light_error">#D93025</color>
+    <color name="light_on_error">#FFFFFF</color>
+    <color name="light_status_bar">#F6F7FC</color>
+    <color name="light_nav_bar">#FFFFFF</color>
+
+    <!-- Dark scheme -->
+    <color name="dark_background">#0A0D1A</color>
+    <color name="dark_on_background">#E8EAF4</color>
+    <color name="dark_surface">#121624</color>
+    <color name="dark_on_surface">#E8EAF4</color>
+    <color name="dark_surface_variant">#1E2333</color>
+    <color name="dark_on_surface_variant">#A2A8BC</color>
+    <color name="dark_outline">#333A4D</color>
+    <color name="dark_error">#F87171</color>
+    <color name="dark_on_error">#40000F</color>
+    <color name="dark_status_bar">#0A0D1A</color>
+    <color name="dark_nav_bar">#0A0D1A</color>
+
+    <!-- Dark-mode brand colors -->
+    <color name="primary_dark">#A79BFF</color>
+    <color name="primary_dark_container">#3A2B8C</color>
+    <color name="secondary_dark">#4EE3F5</color>
+    <color name="secondary_dark_container">#083A44</color>
+    <color name="tertiary_dark">#FB7185</color>
+    <color name="tertiary_dark_container">#541222</color>
+
+    <!-- Semantic / status -->
+    <color name="success">#22C55E</color>
+    <color name="success_dark">#4ADE80</color>
+    <color name="warning">#F59E0B</color>
+    <color name="warning_dark">#FBBF24</color>
+    <color name="success_container">#D6F5E3</color>
+    <color name="success_container_dark">#0B3B20</color>
+
+    <!-- Diff highlight colors -->
+    <color name="diff_add_bg">#123B22</color>
+    <color name="diff_add_bg_light">#E7F7EE</color>
+    <color name="diff_add_fg">#4ADE80</color>
+    <color name="diff_del_bg">#471D27</color>
+    <color name="diff_del_bg_light">#FDEAEE</color>
+    <color name="diff_del_fg">#F87171</color>
+
+    <!-- Legacy names kept for compatibility (used by styles/attrs) -->
+    <color name="pressed_sgit">#3D6D5DF6</color>
+    <color name="branch_name_text">#FFFFFF</color>
+    <color name="branch_name_bg">#6D5DF6</color>
+    <color name="branch_name_bg_pressed">#4C3EE0</color>
+    <color name="general_gray_text_color">#999999</color>
+    <color name="chosen_sgit">#3D00B8D4</color>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Sgit" parent="Theme.Material3.Light">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+
+        <item name="android:colorBackground">@color/light_background</item>
+        <item name="colorOnBackground">@color/light_on_background</item>
+        <item name="colorSurface">@color/light_surface</item>
+        <item name="colorOnSurface">@color/light_on_surface</item>
+        <item name="colorSurfaceVariant">@color/light_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/light_on_surface_variant</item>
+        <item name="colorOutline">@color/light_outline</item>
+        <item name="colorError">@color/light_error</item>
+        <item name="colorOnError">@color/light_on_error</item>
+
+        <item name="android:windowBackground">@drawable/bg_window_light</item>
+        <item name="android:statusBarColor">@color/light_status_bar</item>
+        <item name="android:navigationBarColor">@color/light_nav_bar</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <item name="android:colorAccent">@color/primary</item>
+        <item name="android:colorControlActivated">@color/primary</item>
+        <item name="android:colorControlHighlight">#226D5DF6</item>
+
+        <item name="android:textColor">@color/light_on_background</item>
+        <item name="android:textColorPrimary">@color/light_on_background</item>
+        <item name="android:textColorSecondary">@color/light_on_surface_variant</item>
+        <item name="android:textColorHint">@color/light_on_surface_variant</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowAnimation.MGit</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+
+        <item name="android:listDivider">@color/light_outline</item>
+        <item name="android:listSelector">@drawable/selectable_background_sgit</item>
+        <item name="android:overScrollMode">never</item>
+
+        <item type="color" name="bt_branch_name_bg">@color/branch_name_bg</item>
+        <item type="color" name="bt_branch_name_text_color">@color/branch_name_text</item>
+        <item type="color" name="pager_title_strip_background">@color/branch_name_bg</item>
+        <item type="color" name="mgit_drawer_text_color">@color/light_on_background</item>
+        <item type="color" name="mgit_drawer_background">@color/light_surface</item>
+        <item type="drawable" name="ic_file_fl">@drawable/ic_file_d</item>
+        <item type="drawable" name="ic_folder_fl">@drawable/ic_folder_d</item>
+        <item type="drawable" name="ic_branch_l">@drawable/ic_branch_d</item>
+        <item type="drawable" name="ic_tag_l">@drawable/ic_tag_d</item>
+
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- Window transition animation -->
+    <style name="WindowAnimation.MGit" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_left</item>
+        <item name="android:taskOpenEnterAnimation">@anim/fade_in</item>
+        <item name="android:taskOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:taskCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:taskCloseExitAnimation">@anim/fade_out</item>
+    </style>
+
+</resources>

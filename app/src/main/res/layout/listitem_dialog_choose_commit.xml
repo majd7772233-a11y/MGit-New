@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/commitIcon"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="11dp"
+        android:padding="5dp"
+        android:contentDescription="@string/default_text"
+        android:src="?ic_branch_l" />
+
+    <TextView
+        android:id="@+id/commitTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/commitIcon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/commitIcon"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/commitIcon"
+        android:gravity="start|center"
+        android:minHeight="@dimen/general_min_height"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:text="@string/default_text"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/file_list_item_text_size"
+        android:maxLines="1"
+        android:ellipsize="middle" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+name: Build
+
+on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize]
+  # Allow manual runs from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # Installs cmdline-tools and accepts the Android SDK licenses so AGP
+      # can auto-download the required platform (compileSdk 35) and build-tools.
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      # Signing secrets required in the repository:
+      #   KEYSTORE_BASE64    - base64 encoded my_keystore.jks
+      #                        (generate with: base64 -w0 my_keystore.jks)
+      #   KEY_ALIAS          - key alias (e.g. Key0)
+      #   KEYSTORE_PASSWORD  - keystore password
+      #   KEY_PASSWORD       - key password (may equal KEYSTORE_PASSWORD)
+      - name: Decode signing keystore
+        shell: bash
+        run: echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/keystore.jks"
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+
+      - name: Build, test and sign release APK
+        shell: bash
+        run: |
+          ./gradlew --no-daemon testDebugUnitTest assembleRelease \
+            -Pspecial=true \
+            -Pkeystore="$RUNNER_TEMP/keystore.jks" \
+            -Palias="$KEY_ALIAS" \
+            -PkeystorePassword="$KEYSTORE_PASSWORD" \
+            -PkeyPassword="$KEY_PASSWORD"
+        env:
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+      - name: Upload signed APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: mgit-release-apk
+          path: app/build/outputs/apk/release/*.apk

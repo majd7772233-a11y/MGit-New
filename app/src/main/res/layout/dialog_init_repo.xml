@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="4dp" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MGit.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <EditText
+            android:id="@+id/localPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/dialog_init_local_path_hint"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textSize="@dimen/general_dialog_text_size" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

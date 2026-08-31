@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="default_text">النص الافتراضي</string>
+    <string name="title_clone_repo">استنساخ مستودع</string>
+
+    <!-- action -->
+    <string name="action_search">بحث</string>
+    <string name="action_clone">استنساخ</string>
+    <string name="action_import_repo">استيراد مستودع</string>
+    <string name="action_settings">الإعدادات</string>
+    <string name="action_mode_rename_key">إعادة تسمية المفتاح</string>
+    <string name="action_mode_rename_branch">إعادة تسمية الفرع</string>
+    <string name="action_manage_private_key">المفاتيح الخاصة</string>
+    <string name="action_generate_private_key">توليد مفتاح</string>
+    <string name="action_import_private_key">استيراد مفتاح</string>
+    <string name="action_mode_show_private_key">إظهار المفتاح الخاص</string>
+    <string name="action_mode_show_public_key">إظهار المفتاح العام</string>
+    <string name="action_mode_edit_key_password">تعديل كلمة مرور المفتاح</string>
+    <string name="action_feedback">ملاحظات</string>
+    <string name="action_choose_language">اختيار اللغة</string>
+    <string name="action_mode_diff">الفروقات</string>
+    <string name="action_edit">تعديل</string>
+    <string name="action_edit_save">حفظ</string>
+    <string name="action_copy_all">نسخ الملف كاملاً</string>
+    <string name="action_edit_in_other_app">تعديل بواسطة تطبيقات أخرى</string>
+    <string name="action_reset">استعادة</string>
+    <string name="action_toggle_drawer">تبديل القائمة الجانبية</string>
+    <string name="action_copy_commit_str">نسخ معرّف الالتزام</string>
+    <string name="action_create_external_repo">إنشاء مستودع خارجي</string>
+    <string name="action_share_diff">مشاركة الفروقات</string>
+    <string name="action_save_diff">حفظ الفروقات</string>
+    <string name="action_send_report">إرسال التقرير</string>
+
+    <!-- label msg -->
+    <string name="label_ok">موافق</string>
+    <string name="label_remote_url">عنوان المستودع البعيد</string>
+    <string name="label_cancel">إلغاء</string>
+    <string name="label_clone">استنساخ</string>
+    <string name="label_init">تهيئة</string>
+    <string name="label_delete">حذف</string>
+    <string name="label_generate_key">توليد مفتاح</string>
+    <string name="label_dialog_generate_key">توليد مفتاح</string>
+    <string name="label_username">اسم المستخدم</string>
+    <string name="label_password">كلمة المرور</string>
+    <string name="label_new_file_name">اسم الملف الجديد</string>
+    <string name="label_key_size">طول المفتاح</string>
+    <string name="label_rename">إعادة تسمية</string>
+    <string name="label_send_feedback">إرسال ملاحظات</string>
+    <string name="label_import">استيراد</string>
+    <string name="label_push">رفع</string>
+    <string name="label_push_all">رفع الكل</string>
+    <string name="label_create">إنشاء</string>
+    <string name="label_checkout">سحب</string>
+    <string name="label_git_name">الاسم</string>
+    <string name="label_git_email">البريد الإلكتروني</string>
+    <string name="label_git_name_per_repo">اسم المُعِدّ (لهذا المستودع)</string>
+    <string name="label_git_email_per_repo">بريد المُعِدّ الإلكتروني (لهذا المستودع)</string>
+    <string name="label_done">تم</string>
+    <string name="label_save">حفظ</string>
+    <string name="label_choose_app_to_open">فتح بواسطة…</string>
+    <string name="label_choose_app_to_edit">تعديل بواسطة…</string>
+    <string name="label_new_branch_name">فرع جديد</string>
+    <string name="label_anonymous_checkout">سحب مجهول</string>
+
+    <!-- for title -->
+    <string name="title_activity_repo_detail">المستودع</string>
+    <string name="title_activity_import_repository">استيراد مستودع</string>
+    <string name="title_activity_view_file">ملف: </string>
+    <string name="title_activity_commit_diff">الفروقات:  </string>
+    <string name="title_section1">القسم 1</string>
+    <string name="title_section2">القسم 2</string>
+    <string name="title_section3">القسم 3</string>
+    <string name="tab_files_label">الملفات</string>
+    <string name="tab_file_label">الملف</string>
+    <string name="tab_commits_label">الالتزامات</string>
+    <string name="tab_status_label">الحالة</string>
+
+    <!-- Dialog Msg -->
+    <string name="dialog_choose_branch_title">اختيار الفرع</string>
+    <string name="dialog_choose_option">اختر خياراً...</string>
+    <string name="dialog_rename_repo_title">إعادة تسمية المستودع</string>
+    <string name="dialog_rename_repo_hint">اسم المستودع</string>
+    <string name="dialog_delete_repo_title">تأكيد الحذف</string>
+    <string name="dialog_delete_repo_msg">هل أنت متأكد من رغبتك في حذف هذا المستودع؟</string>
+    <string name="dialog_rename_key_title">إعادة تسمية</string>
+    <string name="dialog_edit_key_password_title">كلمة مرور المفتاح</string>
+    <string name="dialog_rename_branch_title">إعادة تسمية</string>
+    <string name="dialog_choose_language_title">اختيار اللغة</string>
+    <string name="dialog_comfirm_import_repo_title">استيراد المستودع</string>
+    <string name="dialog_comfirm_import_repo_msg">هل أنت متأكد من رغبتك في استيراد هذا المستودع؟</string>
+    <string name="dialog_merge_title">اختيار الفرع للدمج</string>
+    <string name="dialog_merge_checkbox">الالتزام بعد الدمج</string>
+    <string name="dialog_file_delete">حذف الملف</string>
+    <string name="dialog_file_delete_msg">هل أنت متأكد من رغبتك في حذف هذا الملف أو المجلد من مجلد العمل؟</string>
+    <string name="dialog_file_remove_cached">إزالة الملف المخزّن</string>
+    <string name="dialog_file_remove_cached_msg">هل أنت متأكد من رغبتك في حذف هذا الملف أو المجلد من الفهرس؟</string>
+    <string name="dialog_file_remove_force">إزالة الملف قسرياً</string>
+    <string name="dialog_file_remove_force_msg">هل أنت متأكد من رغبتك في حذف هذا الملف أو المجلد من مجلد العمل والفهرس؟</string>
+    <string name="dialog_key_delete">حذف المفتاح</string>
+    <string name="dialog_key_delete_msg">هل أنت متأكد من رغبتك في حذف هذا المفتاح؟</string>
+    <string name="dialog_branch_delete">حذف الفرع</string>
+    <string name="dialog_branch_delete_msg">هل أنت متأكد من رغبتك في حذف هذا الفرع؟</string>
+    <string name="dialog_reset_commit_title">استعادة التغييرات</string>
+    <string name="dialog_reset_commit_msg">هل أنت متأكد من رغبتك في تجاهل جميع التغييرات؟</string>
+    <string name="dialog_create_dir_title">مجلد جديد</string>
+    <string name="dialog_create_dir_hint">اسم المجلد</string>
+    <string name="dialog_create_file_title">ملف جديد</string>
+    <string name="dialog_create_file_hint">اسم الملف</string>
+    <string name="dialog_comfirm_checkout_commit_title">تأكيد السحب</string>
+    <string name="dialog_comfirm_checkout_commit_msg">سحب الفرع</string>
+    <string name="dialog_profile_preferences_title">التفضيلات</string>
+    <string name="dialog_prompt_for_password_title">مطلوب التحقق من الهوية</string>
+    <string name="dialog_prompt_for_password_title_auth_fail">فشل التحقق من الهوية</string>
+    <string name="dialog_prompt_for_password_checkbox">حفظ اسم المستخدم وكلمة المرور</string>
+    <string name="dialog_title_you_want_to">ماذا تريد أن…</string>
+    <string name="dialog_create_branch_title">إنشاء فرع جديد</string>
+    <string name="dialog_create_branch_hint">اسم الفرع</string>
+    <string name="dialog_clone_recursive">استنساخ متكرر</string>
+    <string name="dialog_show_unstaged_diff">فروقات غير المثبتة</string>
+    <string name="dialog_show_staged_diff">فروقات المثبتة</string>
+    <string name="dialog_show_invalid_remote">تقرير مستودع بعيد غير صالح</string>
+    <string name="dialog_not_supported">غير مدعوم</string>
+    <string name="dialog_not_supported_msg">هذه الميزة غير مدعومة على جهازك، راجع الدليل لمزيد من التفاصيل.</string>
+    <string name="dialog_error_title">حدث خطأ</string>
+    <string name="dialog_error_send_report">إرسال تقرير الخطأ</string>
+    <string name="dialog_error_occurred_msg">حدث خطأ غير متوقع</string>
+    <string name="dialog_keymap_title">مفاتيح الاختصار</string>
+    <string name="dialog_keymap_mesg"> C - الالتزامات\n F- الملفات\n S- الحالة\n ? - المساعدة\n</string>
+    <string name="dialog_open_remote">فتح عنوان المستودع البعيد</string>
+    <string name="dialog_open_remote_title">اختيار تطبيق لفتح %s البعيد</string>
+    <string name="dialog_open_remote_no_app_available">لا توجد تطبيقات متاحة لفتح العنوان</string>
+    <string name="dialog_permission_not_granted">يتطلب MGit منحه إذن الكتابة حتى يتمكن من تخزين مستودعات git المحلية على جهازك، وبدون ذلك لن يعمل MGit بشكل صحيح.</string>
+
+    <!-- Others -->
+    <string name="pull_msg_init">جارٍ السحب… </string>
+    <string name="progress_left_init">0%</string>
+    <string name="progress_right_init">0/0</string>
+    <string name="push_msg_init">جارٍ الرفع… </string>
+    <string name="fetch_msg_init">جارٍ الجلب… </string>
+    <string name="title_activity_private_key_manage">إدارة المفاتيح الخاصة</string>
+    <string name="hello_world">مرحباً، أيها العالم!</string>
+    <string name="title_activity_explore_file">استكشاف الملفات</string>
+    <string name="title_activity_settings">الإعدادات</string>
+    <string name="title_config_repo">إعدادات المستودع</string>
+
+    <!-- toast msg -->
+    <string name="feedback_subject">ملاحظات</string>
+    <string name="cannot_delete_branch">لا يمكن حذف %s</string>
+    <string name="cannot_delete_current_branch">لا يمكن حذف الفرع الحالي %s</string>
+    <string name="cannot_rename_branch">لا يمكن إعادة تسمية %s</string>
+    <string name="toast_file_saved">تم حفظ الملف</string>
+
+    <!-- Preferences -->
+
+    <string name="preference_repo_location">مجلد التخزين الرئيسي للمستودعات</string>
+    <string name="pref_category_title_general">عام</string>
+    <string name="action_select_root_dir">تعيين كمجلد رئيسي</string>
+    <string name="action_create_new_dir">إنشاء مجلد جديد</string>
+    <string name="pref_category_title_git_profile">ملف Git الشخصي</string>
+    <string name="preference_git_user_name">اسم المستخدم</string>
+    <string name="preference_git_user_email">البريد الإلكتروني</string>
+    <string name="pref_category_title_about">حول التطبيق</string>
+    <string name="preference_send_feedback">ملاحظات</string>
+    <string name="preference_send_feedback_summary">أرسل ملاحظاتك بإنشاء مشكلة جديدة على GitHub</string>
+    <string name="preference_app_version">الإصدار</string>
+    <string name="preference_manage_ssh_keys_summary">إدارة مفاتيح SSH</string>
+    <string name="preference_manage_ssh_keys">مفاتيح SSH</string>
+    <string name="preference_use_gravatar">استخدام صور Gravatar</string>
+    <string name="preference_use_gravatar_summary">تحميل صور الملف الشخصي من gravatar.com</string>
+    <string name="pref_category_title_security">الأمان</string>
+    <string name="preference_use_theme">اختيار الثيم</string>
+    <string name="action_git_profile">ملف Git الشخصي</string>
+    <string name="action_open_in_other_app">فتح بواسطة تطبيقات أخرى</string>
+    <string name="action_add_private_key">إضافة مفتاح خاص</string>
+
+    <!-- Crash reporting via ACRA -->
+    <string name="crash_toast_text">خطأ في MGit - جارٍ تجميع البيانات لإرسال تقرير الأعطال</string>
+
+    <!-- Intent filters -->
+    <string name="cloning">جارٍ الاستنساخ… </string>
+    <string name="importing">جارٍ الاستيراد… </string>
+    <string name="clone_with_mgit">استنساخ بواسطة MGit</string>
+    <string name="invalid_url">عنوان غير صالح!</string>
+    <string name="initialising">جارٍ التهيئة… </string>
+    <string name="repository_already_present">المستودع موجود مسبقاً!</string>
+    <string name="error_no_worktree">هذا مستودع فارغ (bare)!</string>
+    <string name="error_invalid_index">فهرس Git غير صالح!</string>
+    <string name="error_file_not_found">الملف غير موجود!</string>
+    <string name="preference_language">اللغة</string>
+    <string name="preference_language_summary">اختر لغة التطبيق</string>
+    <string name="dialog_access_all_files_title">السماح لـ MGit بالوصول إلى جميع الملفات</string>
+    <string name="dialog_access_all_files_msg">لكي يعمل MGit بشكل صحيح ويتمكن من العثور على الملفات المعدّلة في مجلد العمل، يحتاج الإذن للوصول إلى جميع الملفات.\n\nهل تمنح الإذن؟</string>
+</resources>

@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        coreLibraryDesugaringEnabled true
+    }
+
+    defaultConfig {
+        applicationId "com.manichord.mgit"
+        minSdk 21
+        targetSdk 34
+
+        vectorDrawables.useSupportLibrary = true
+
+        versionCode 240
+        versionName "1.7.0"
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        if (project.hasProperty('special')) {
+            release {
+                def storePass = project.hasProperty('keystorePassword') && !project.property('keystorePassword').toString().isEmpty()
+                        ? project.property('keystorePassword') : project.property('password')
+                def keyPass = project.hasProperty('keyPassword') && !project.property('keyPassword').toString().isEmpty()
+                        ? project.property('keyPassword') : storePass
+                keyAlias project.property('alias')
+                keyPassword keyPass
+                storeFile file(project.property('keystore'))
+                storePassword storePass
+            }
+        } else {
+            release {
+                keyAlias ''
+                keyPassword ''
+                storeFile file('/empty')
+                storePassword ''
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        if (details.requested.group == "com.jcraft" && details.requested.name == "jsch") {
+            details.useTarget("com.github.mwiede:jsch:0.2.0")
+        }
+
+    }
+    exclude module: 'httpclient'
+}
+
+
+dependencies {
+    def supportLib_version = "28.0.0"
+    def lifecycle_version = "1.1.1"
+
+    def acraVersion = '5.8.4'
+
+    def soraVersion = '0.24.6'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
+    implementation 'androidx.fragment:fragment:1.4.0'
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+
+    // ViewModel and LiveData
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.4.0'
+
+    implementation 'com.jakewharton.timber:timber:4.5.1'
+    implementation 'com.github.mwiede:jsch:0.2.0'
+    implementation 'commons-io:commons-io:2.5'
+    implementation 'org.eclipse.jgit:org.eclipse.jgit:3.7.1.201504261725-r'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.scottyab:secure-preferences-lib:0.1.7'
+    implementation 'org.conscrypt:conscrypt-android:2.5.2'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.70'
+
+    // sora-editor: native code editor with TextMate syntax highlighting
+    implementation(platform("io.github.rosemoe:editor-bom:$soraVersion"))
+    implementation 'io.github.rosemoe:editor'
+    implementation 'io.github.rosemoe:language-textmate'
+    implementation 'io.github.rosemoe:oniguruma-native'
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.5'
+
+    implementation "ch.acra:acra-mail:$acraVersion"
+    implementation "ch.acra:acra-dialog:$acraVersion"
+
+    debugImplementation 'com.facebook.stetho:stetho:1.5.0'
+    debugImplementation 'com.facebook.stetho:stetho-timber:1.5.0'
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.10.3'
+}

@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/commitName" >
+
+        <androidx.viewpager.widget.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="?pager_title_strip_background"
+            android:paddingBottom="10dp"
+            android:paddingTop="12dp"
+            android:elevation="4dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/commitName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_gradient_primary"
+        android:gravity="center"
+        android:padding="@dimen/branch_label_padding"
+        android:text="@string/default_text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/branch_label_text_size"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:ellipsize="middle"
+        android:stateListAnimator="@null" />
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commitType"
+            android:layout_alignTop="@+id/commitName"
+            android:layout_alignBottom="@+id/commitName"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_branch_w"
+            android:padding="10dp"
+            android:contentDescription="@string/default_text"/>
+
+    <LinearLayout
+        android:id="@+id/pullProgressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/commitName"
+        android:layout_margin="@dimen/general_horizontal_margin"
+        android:background="@drawable/bg_surface_round"
+        android:elevation="8dp"
+        android:orientation="vertical"
+        android:padding="@dimen/general_padding_larger"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/pullMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/default_text"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/file_list_header_msg_size" />
+
+        <ProgressBar
+            android:id="@+id/pullProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/leftHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@string/default_text"
+                android:textColor="@color/general_gray_text_color"
+                android:textSize="@dimen/file_list_header_hint_size" />
+
+            <TextView
+                android:id="@+id/rightHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="end"
+                android:text="@string/default_text"
+                android:textColor="@color/general_gray_text_color"
+                android:textSize="@dimen/file_list_header_hint_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="merge_ff_type">
+        <item>سريع للأمام</item>
+        <item>سريع للأمام فقط</item>
+        <item>بدون تقدم سريع</item>
+    </string-array>
+    <string-array name="repo_file_operations">
+        <item>إضافة إلى المرحلة</item>
+        <item>سحب (استعادة التغييرات)</item>
+        <item>حذف</item>
+        <item>إزالة المخزّن من المستودع</item>
+        <item>إزالة قسرياً من المستودع</item>
+        <item>جعل قابل للتنفيذ</item>
+        <item>جعل غير قابل للتنفيذ</item>
+    </string-array>
+    <string-array name="repo_operation_names">
+        <item>فرع جديد</item>
+        <item>سحب</item>
+        <item>رفع</item>
+        <item>إضافة الكل إلى المرحلة</item>
+        <item>التزام</item>
+        <item>إعادة تعيين (HARD)</item>
+        <item>دمج</item>
+        <item>جلب</item>
+        <item>إعادة الأساس</item>
+        <item>التقاط التزام</item>
+        <item>الفروقات</item>
+        <item>ملف جديد</item>
+        <item>مجلد جديد</item>
+        <item>إضافة مستودع بعيد</item>
+        <item>إزالة مستودع بعيد</item>
+        <item>حذف</item>
+        <item>الإعدادات الخام</item>
+        <item>الإعدادات</item>
+    </string-array>
+    <string-array name="dialog_choose_repo_action_items">
+        <item>إعادة تسمية</item>
+        <item>حذف</item>
+    </string-array>
+
+    <!-- MUST stay in sync with theme_ids order (editor_theme_names/codemirror_theme_names/theme_ids are NOT translated) -->
+    <string-array name="theme_names">
+        <item>فاتح</item>
+        <item>داكن</item>
+    </string-array>
+
+</resources>
