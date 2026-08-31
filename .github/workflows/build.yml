@@ -1,16 +1,10 @@
 name: Build
 
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
   pull_request:
     types: [opened, synchronize]
-  # Allow manual runs from the Actions tab
   workflow_dispatch:
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,8 +19,6 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      # Installs cmdline-tools and accepts the Android SDK licenses so AGP
-      # can auto-download the required platform (compileSdk 35) and build-tools.
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
@@ -36,30 +28,27 @@ jobs:
       - name: Make Gradle wrapper executable
         run: chmod +x gradlew
 
-      # Signing secrets required in the repository:
-      #   KEYSTORE_BASE64    - base64 encoded my_keystore.jks
-      #                        (generate with: base64 -w0 my_keystore.jks)
-      #   KEY_ALIAS          - key alias (e.g. Key0)
-      #   KEYSTORE_PASSWORD  - keystore password
-      #   KEY_PASSWORD       - key password (may equal KEYSTORE_PASSWORD)
+      # Decode my_keystore.jks from GitHub Secret
       - name: Decode signing keystore
         shell: bash
-        run: echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/keystore.jks"
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/my_keystore.jks"
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
 
+      # Build, test and sign release APK
       - name: Build, test and sign release APK
         shell: bash
         run: |
           ./gradlew --no-daemon testDebugUnitTest assembleRelease \
             -Pspecial=true \
-            -Pkeystore="$RUNNER_TEMP/keystore.jks" \
+            -Pkeystore="$RUNNER_TEMP/my_keystore.jks" \
             -Palias="$KEY_ALIAS" \
-            -PkeystorePassword="$KEYSTORE_PASSWORD" \
+            -PstorePassword="$STORE_PASSWORD" \
             -PkeyPassword="$KEY_PASSWORD"
         env:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
-          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       - name: Upload signed APK
