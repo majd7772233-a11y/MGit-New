@@ -2,7 +2,6 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrimColor="#66000000" >
 
     <include layout="@layout/activity_repo_detail_content" />
 
