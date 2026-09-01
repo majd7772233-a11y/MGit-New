@@ -41,6 +41,7 @@ local.properties
 .idea/*
 !.idea/codeStyleSettings.xml
 .gradle
+.kotlin
 /*/local.properties
 /*/out
 /*/*/build

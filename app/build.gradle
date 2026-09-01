@@ -12,6 +12,10 @@ android {
         coreLibraryDesugaringEnabled true
     }
 
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         applicationId "com.magd.mgit"
         minSdk 21
@@ -25,6 +29,7 @@ android {
 
     buildFeatures {
         dataBinding true
+        buildConfig true
     }
 
     lintOptions {
