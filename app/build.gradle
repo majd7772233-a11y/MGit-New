@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 
 android {
-    namespace "com.manichord.mgit"
+    namespace "me.sheimi.sgit"
     compileSdk 36
 
     compileOptions {
